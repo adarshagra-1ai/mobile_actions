@@ -1,0 +1,7 @@
+myvenv/
+__pycache__/
+*.pyc
+.env
+model/
+models/
+document.txt
