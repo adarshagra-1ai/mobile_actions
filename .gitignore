@@ -1,7 +1,76 @@
-myvenv/
-__pycache__/
-*.pyc
+# ─── Environment — never commit secrets ──────────────────────────────────────
 .env
+.env.local
+.env.*.local
+!.env.example
+
+# ─── Python ──────────────────────────────────────────────────────────────────
+myvenv/
+.venv/
+venv/
+env/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+pip-log.txt
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ─── Model weights & adapters (large binary files) ───────────────────────────
 model/
 models/
-document.txt
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+*.ggml
+*.litertlm
+*.llamafile
+checkpoints/
+runs/
+outputs/
+
+# ─── HuggingFace & LiteRT cache ──────────────────────────────────────────────
+.cache/
+
+# ─── Reference documents (local only) ────────────────────────────────────────
+document.pdf
+
+# ─── Logs & experiment tracking ──────────────────────────────────────────────
+*.log
+logs/
+wandb/
+tensorboard/
+lightning_logs/
+
+# ─── Temp & backup ───────────────────────────────────────────────────────────
+*.bak
+*.tmp
+*.temp
+*.orig
+
+# ─── OS ──────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# ─── Editors ─────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
